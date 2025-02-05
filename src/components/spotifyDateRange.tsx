@@ -50,13 +50,13 @@ const SpotifyRangeDate: FC<Props> = ({ session }) => {
   }
 
   return (
-    <div className='flex items-center mx-auto mb-4'>
-      <div className='flex justify-center shadow rounded-full overflow-hidden'>
+    <div className='flex items-center mx-auto mb-4 '>
+      <div className='flex justify-center shadow-lg rounded-full overflow-hidden bg-white'>
         {datesBtn.map((btn, index) => (
           <Button
             disabled={!session}
             key={index}
-            className={cn('rounded-none hover:bg-foreground text-xs hover:text-white', btn.active && 'bg-foreground text-white')}
+            className={cn('rounded-none hover:bg-foreground text-xs hover:text-white', btn.active && 'bg-green-500 text-white')}
             size='sm'
             variant='ghost'
             value={btn.value}

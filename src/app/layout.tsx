@@ -4,8 +4,8 @@ import "@/styles/globals.css";
 import Header from "@/components/header";
 
 export const metadata: Metadata = {
-  title: "Spotify API",
-  description: "Spotify API.",
+  title: "Statify",
+  description: "This app gives you the possibility to check out your most listened-to artists, tracks, and genres over different time periods. Discover trends in your listening history, and compare your stats with friends!",
 };
 
 const onest = Onest({

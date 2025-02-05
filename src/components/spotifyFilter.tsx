@@ -41,7 +41,7 @@ const SpotifyFilter = () => {
   });
 
   function onSubmit(data: z.infer<typeof filterSchema>) {
-    setFilterType(data.filter as 'tracks' | 'artists');
+    setFilterType(data.filter as 'tracks' | 'artists' | 'albums');
   }
 
   return (
@@ -70,6 +70,7 @@ const SpotifyFilter = () => {
                 <SelectContent>
                   <SelectItem value="tracks">Top Tracks</SelectItem>
                   <SelectItem value="artists">Top Artists</SelectItem>
+                  <SelectItem value="albums">Top Albums</SelectItem>
                 </SelectContent>
               </Select>
               <FormMessage />

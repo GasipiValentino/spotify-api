@@ -17,13 +17,13 @@ const SpotifyCard: FC<Props> = ({ image, name, aditionalInfo }) => {
           <CardContent className="p-0 rounded-3xl">
             <div className="flex flex-col gap-6 sm:gap-4 pb-5">
               <div className={`flex justify-center items-center overflow-hidden aspect-square relative`}>
-                <div className="absolute w-full border-2 h-full -translate-x-1/2 group-hover:-translate-x-1/2 sm:translate-x-0 z-10 duration-300 transition-all">
-                  <Image src={image} alt="artist-cover" fill className="object-cover object-center" />
+                <div className="absolute w-full border-2 h-full -translate-x-1/2 group-hover:-translate-x-1/2 sm:translate-x-0 z-10 duration-300 transition-all rounded-md">
+                  <Image src={image} alt="artist-cover" fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className="object-cover object-center rounded-md" />
                 </div>
-                <Image className="max-sm:animate-spinDisc p-2" src='/assets/images/disc-vinyl.webp' alt="disco-de-vinilo" fill />
+                <Image className="max-sm:animate-spinDisc p-2" sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" src='/assets/images/disc-vinyl.webp' alt="disco-de-vinilo" fill />
               </div>
               <div className="w-full h-full flex flex-col gap-1 items-center justify-center text-center px-2">
-                <span className="text-lg sm:text-xs text-foreground font-semibold">{name}</span>
+                <span className="text-lg sm:text-xs text-foreground font-semibold text-green-950">{name}</span>
                 <span className="text-xs text-muted-foreground capitalize">{aditionalInfo}</span>
               </div>
             </div>
