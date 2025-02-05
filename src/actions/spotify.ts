@@ -50,7 +50,7 @@ export const getCurrentUserTopArtists = async (access_token: string, time_range?
 export const getCurrentUserTopAlbums = async (
   access_token: string,
   time_range: 'short_term' | 'medium_term' | 'long_term' = 'medium_term'
-): Promise<TopAlbumsResponse> => {
+): Promise<ITopAlbums> => {
   // Obtener las canciones más escuchadas del usuario
   const response = await axios.get(`${SPOTIFY_ENDPOINT}/me/top/tracks?time_range=${time_range}&limit=20`, {
     headers: {
