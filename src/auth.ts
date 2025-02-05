@@ -3,7 +3,7 @@ import { JWT } from "next-auth/jwt"
 import { Provider } from "next-auth/providers"
 import spotify from "next-auth/providers/spotify"
 
-export interface ISEssion extends Session {
+export interface ISession extends Session {
     accessToken?: string
 }
 
@@ -48,7 +48,7 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
         }
         return token
     },
-    async session({session, token}: {session: ISEssion, token: IJWT}){
+    async session({session, token}: {session: ISession, token: IJWT}){
         session.accessToken = token.accessToken
         return session
     }
