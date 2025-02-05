@@ -6,7 +6,7 @@ import { createContext, useState, useEffect, useCallback, useMemo } from 'react'
 import { getUserAccessToken, logout } from '@/actions/auth';
 import { ITopTracks } from '@/types/spotify/top-tracks';
 import { ITopArtists } from '@/types/spotify/top-artists';
-import { Item, AlbumItem, TopAlbumsResponse } from '@/types/spotify/top-albums';
+import { ITopAlbums, Item, AlbumItem } from '@/types/spotify/top-albums';
 import { dumbData } from '@/data/dumbdata';
 
 interface SpotifyContextProps {

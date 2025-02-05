@@ -1,4 +1,4 @@
-interface Item {
+export interface Item {
     id: string;
     name: string;
     album: AlbumItem; // El álbum al que pertenece la canción
@@ -6,7 +6,7 @@ interface Item {
   }
   
   // Definir la interfaz para un ítem de álbum (AlbumItem)
-  interface AlbumItem {
+  export interface AlbumItem {
     id: string;
     name: string;
     images: { url: string }[]; // Las imágenes del álbum
@@ -14,6 +14,6 @@ interface Item {
   }
   
   // Definir la interfaz para la respuesta de los álbumes
-  interface ITopAlbums {
+  export interface ITopAlbums {
     items: AlbumItem[];
   }

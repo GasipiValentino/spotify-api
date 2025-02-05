@@ -2,7 +2,7 @@
 
 import axios from "axios"
 import { Item } from "@/types/spotify/top-tracks"
-import { AlbumItem, TopAlbumsResponse } from "../types/spotify/top-albums"
+import { AlbumItem, ITopAlbums } from "../types/spotify/top-albums"
 
 const SPOTIFY_TOKEN_URI = "https://accounts.spotify.com/api/token"
 const SPOTIFY_ENDPOINT = "https://api.spotify.com/v1"
